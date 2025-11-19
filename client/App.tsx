@@ -16,6 +16,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import StudentDashboard from "./pages/StudentDashboard";
 import AddStudent from "./pages/AddStudent";
 import StudentsList from "./pages/StudentsList";
+import EditStudent from "./pages/EditStudent";
 import AttendanceRecords from "./pages/AttendanceRecords";
 import FaceAttendance from "./pages/FaceAttendance";
 import QRAttendance from "./pages/QRAttendance";
