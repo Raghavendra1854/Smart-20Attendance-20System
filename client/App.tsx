@@ -39,6 +39,7 @@ const App = () => (
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/add-student" element={<AddStudent />} />
           <Route path="/admin/students" element={<StudentsList />} />
+          <Route path="/admin/edit-student/:id" element={<EditStudent />} />
           <Route path="/admin/attendance" element={<AttendanceRecords />} />
 
           {/* Student Routes */}
