@@ -64,7 +64,9 @@ export default function AttendanceRecords() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <h1 className="text-2xl font-bold text-gray-900">Attendance Records</h1>
+          <h1 className="text-2xl font-bold text-gray-900">
+            Attendance Records
+          </h1>
         </div>
       </header>
 
@@ -127,13 +129,19 @@ export default function AttendanceRecords() {
               <tbody>
                 {loading ? (
                   <tr>
-                    <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    <td
+                      colSpan={4}
+                      className="px-6 py-8 text-center text-gray-500"
+                    >
                       Loading records...
                     </td>
                   </tr>
                 ) : filteredRecords.length === 0 ? (
                   <tr>
-                    <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    <td
+                      colSpan={4}
+                      className="px-6 py-8 text-center text-gray-500"
+                    >
                       {records.length === 0
                         ? "No attendance records yet"
                         : "No records match the selected filters"}
@@ -158,7 +166,7 @@ export default function AttendanceRecords() {
                       <td className="px-6 py-4 text-sm">
                         <span
                           className={`px-3 py-1 rounded-full text-xs font-semibold ${getModeColor(
-                            record.mode
+                            record.mode,
                           )}`}
                         >
                           {getModeLabel(record.mode)}

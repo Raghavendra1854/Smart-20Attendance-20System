@@ -1,15 +1,21 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Camera, AlertCircle, CheckCircle, XCircle, ArrowLeft } from "lucide-react";
+import {
+  Camera,
+  AlertCircle,
+  CheckCircle,
+  XCircle,
+  ArrowLeft,
+} from "lucide-react";
 
 export default function FaceAttendance() {
   const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [cameraActive, setCameraActive] = useState(false);
-  const [status, setStatus] = useState<"idle" | "scanning" | "detected" | "not_detected" | "success" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<
+    "idle" | "scanning" | "detected" | "not_detected" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
   const [studentName, setStudentName] = useState("");
 
@@ -33,7 +39,9 @@ export default function FaceAttendance() {
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
         setTimeout(() => {
-          setMessage("Face recognition active. Position your face in the camera.");
+          setMessage(
+            "Face recognition active. Position your face in the camera.",
+          );
           // Simulate face detection
           simulateFaceDetection();
         }, 1500);
@@ -132,7 +140,9 @@ export default function FaceAttendance() {
               {!cameraActive ? (
                 <div className="text-center">
                   <Camera className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-white text-lg font-semibold">Camera Preview</p>
+                  <p className="text-white text-lg font-semibold">
+                    Camera Preview
+                  </p>
                   <p className="text-gray-400 text-sm mt-2">
                     Click "Start Face Scan" to begin
                   </p>
@@ -163,10 +173,10 @@ export default function FaceAttendance() {
                 status === "success"
                   ? "bg-green-50 border border-green-200"
                   : status === "error" || status === "not_detected"
-                  ? "bg-red-50 border border-red-200"
-                  : status === "detected"
-                  ? "bg-blue-50 border border-blue-200"
-                  : "bg-yellow-50 border border-yellow-200"
+                    ? "bg-red-50 border border-red-200"
+                    : status === "detected"
+                      ? "bg-blue-50 border border-blue-200"
+                      : "bg-yellow-50 border border-yellow-200"
               }`}
             >
               {status === "success" ? (
@@ -182,27 +192,27 @@ export default function FaceAttendance() {
                     status === "success"
                       ? "text-green-900"
                       : status === "error" || status === "not_detected"
-                      ? "text-red-900"
-                      : "text-blue-900"
+                        ? "text-red-900"
+                        : "text-blue-900"
                   }`}
                 >
                   {status === "success"
                     ? "Attendance Marked"
                     : status === "scanning"
-                    ? "Scanning Face"
-                    : status === "detected"
-                    ? "Face Detected"
-                    : status === "not_detected"
-                    ? "Face Not Detected"
-                    : "Error"}
+                      ? "Scanning Face"
+                      : status === "detected"
+                        ? "Face Detected"
+                        : status === "not_detected"
+                          ? "Face Not Detected"
+                          : "Error"}
                 </p>
                 <p
                   className={`text-sm mt-1 ${
                     status === "success"
                       ? "text-green-700"
                       : status === "error" || status === "not_detected"
-                      ? "text-red-700"
-                      : "text-blue-700"
+                        ? "text-red-700"
+                        : "text-blue-700"
                   }`}
                 >
                   {message}

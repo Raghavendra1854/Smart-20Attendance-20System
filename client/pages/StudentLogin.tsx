@@ -106,7 +106,10 @@ export default function StudentLogin() {
           <div className="mt-6 text-center">
             <p className="text-gray-600 text-sm">
               Are you an admin?{" "}
-              <Link to="/admin-login" className="text-blue-600 font-semibold hover:underline">
+              <Link
+                to="/admin-login"
+                className="text-blue-600 font-semibold hover:underline"
+              >
                 Admin Login
               </Link>
             </p>
@@ -114,13 +117,24 @@ export default function StudentLogin() {
 
           <div className="mt-6 p-4 bg-blue-50 rounded-lg text-sm text-gray-700">
             <p className="font-semibold mb-2">Demo Credentials:</p>
-            <p>Email: <code className="bg-white px-2 py-1 rounded">student1@example.com</code></p>
-            <p>Password: <code className="bg-white px-2 py-1 rounded">student123</code></p>
+            <p>
+              Email:{" "}
+              <code className="bg-white px-2 py-1 rounded">
+                student1@example.com
+              </code>
+            </p>
+            <p>
+              Password:{" "}
+              <code className="bg-white px-2 py-1 rounded">student123</code>
+            </p>
           </div>
         </div>
 
         <div className="mt-8 text-center">
-          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">
+          <Link
+            to="/"
+            className="text-gray-600 hover:text-blue-600 font-medium"
+          >
             ← Back to Home
           </Link>
         </div>

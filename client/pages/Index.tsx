@@ -11,7 +11,9 @@ export default function Index() {
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Shield className="w-6 h-6 text-white" />
             </div>
-            <span className="font-bold text-xl text-gray-900">AttendanceAI</span>
+            <span className="font-bold text-xl text-gray-900">
+              AttendanceAI
+            </span>
           </div>
           <div className="flex gap-4">
             <Link
@@ -37,7 +39,9 @@ export default function Index() {
             Smart Attendance System
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Revolutionize your attendance management with AI-powered face recognition and QR code scanning. Fast, accurate, and completely secure.
+            Revolutionize your attendance management with AI-powered face
+            recognition and QR code scanning. Fast, accurate, and completely
+            secure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -66,7 +70,8 @@ export default function Index() {
               Face Recognition
             </h3>
             <p className="text-gray-600 mb-4">
-              AI-powered face detection with real-time identification. Students can mark attendance instantly by standing in front of the camera.
+              AI-powered face detection with real-time identification. Students
+              can mark attendance instantly by standing in front of the camera.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-center gap-2">
@@ -93,7 +98,8 @@ export default function Index() {
               QR Code Scanning
             </h3>
             <p className="text-gray-600 mb-4">
-              Generate unique QR codes for each student. Scan with any phone to instantly mark attendance with timestamp verification.
+              Generate unique QR codes for each student. Scan with any phone to
+              instantly mark attendance with timestamp verification.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-center gap-2">
@@ -120,7 +126,8 @@ export default function Index() {
               Advanced Analytics
             </h3>
             <p className="text-gray-600 mb-4">
-              Comprehensive dashboard with monthly analytics, attendance trends, and visual reports for better insights.
+              Comprehensive dashboard with monthly analytics, attendance trends,
+              and visual reports for better insights.
             </p>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-center gap-2">
@@ -141,34 +148,44 @@ export default function Index() {
 
         {/* Additional Features */}
         <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose AttendanceAI?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Why Choose AttendanceAI?
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex gap-4">
               <Clock className="w-6 h-6 flex-shrink-0" />
               <div>
                 <h4 className="font-bold mb-2">Lightning Fast</h4>
-                <p className="text-blue-100">Mark attendance in seconds with real-time processing</p>
+                <p className="text-blue-100">
+                  Mark attendance in seconds with real-time processing
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Users className="w-6 h-6 flex-shrink-0" />
               <div>
                 <h4 className="font-bold mb-2">Easy Management</h4>
-                <p className="text-blue-100">Simple student management and bulk operations</p>
+                <p className="text-blue-100">
+                  Simple student management and bulk operations
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Shield className="w-6 h-6 flex-shrink-0" />
               <div>
                 <h4 className="font-bold mb-2">Secure & Reliable</h4>
-                <p className="text-blue-100">Bank-grade security with encrypted face data</p>
+                <p className="text-blue-100">
+                  Bank-grade security with encrypted face data
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <BarChart3 className="w-6 h-6 flex-shrink-0" />
               <div>
                 <h4 className="font-bold mb-2">Smart Insights</h4>
-                <p className="text-blue-100">Detailed analytics and attendance patterns</p>
+                <p className="text-blue-100">
+                  Detailed analytics and attendance patterns
+                </p>
               </div>
             </div>
           </div>
@@ -176,7 +193,9 @@ export default function Index() {
 
         {/* CTA Section */}
         <div className="mt-20 text-center">
-          <p className="text-gray-600 mb-8">Ready to transform your attendance management?</p>
+          <p className="text-gray-600 mb-8">
+            Ready to transform your attendance management?
+          </p>
           <Link
             to="/admin-login"
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-xl transition transform hover:scale-105"
@@ -193,33 +212,81 @@ export default function Index() {
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Product</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/" className="hover:text-blue-600">Features</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Pricing</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Security</Link></li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Security
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/" className="hover:text-blue-600">About</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Blog</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Contact</Link></li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/" className="hover:text-blue-600">Docs</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">API</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Support</Link></li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Docs
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    API
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Support
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link to="/" className="hover:text-blue-600">Privacy</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">Terms</Link></li>
-                <li><Link to="/" className="hover:text-blue-600">License</Link></li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    Terms
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:text-blue-600">
+                    License
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

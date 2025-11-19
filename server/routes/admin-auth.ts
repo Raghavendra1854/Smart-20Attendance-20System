@@ -30,7 +30,9 @@ export const handleAdminLogin: RequestHandler<
     return;
   }
 
-  const admin = ADMINS.find((a) => a.email === email && a.password === password);
+  const admin = ADMINS.find(
+    (a) => a.email === email && a.password === password,
+  );
 
   if (!admin) {
     res.status(401).json({ error: "Invalid email or password" });
@@ -38,7 +40,9 @@ export const handleAdminLogin: RequestHandler<
   }
 
   // In production, use JWT or sessions
-  const token = Buffer.from(`admin:${admin.id}:${Date.now()}`).toString("base64");
+  const token = Buffer.from(`admin:${admin.id}:${Date.now()}`).toString(
+    "base64",
+  );
 
   const response: LoginResponse = {
     token,

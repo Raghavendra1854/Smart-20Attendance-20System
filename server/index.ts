@@ -48,8 +48,16 @@ export function createServer() {
 
   // Attendance Routes
   app.get("/api/admin/attendance", verifyAdminToken, handleGetAttendance);
-  app.post("/api/student/attendance/face", verifyStudentToken, handleMarkFaceAttendance);
-  app.post("/api/student/attendance/qr", verifyStudentToken, handleMarkQRAttendance);
+  app.post(
+    "/api/student/attendance/face",
+    verifyStudentToken,
+    handleMarkFaceAttendance,
+  );
+  app.post(
+    "/api/student/attendance/qr",
+    verifyStudentToken,
+    handleMarkQRAttendance,
+  );
 
   return app;
 }

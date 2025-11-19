@@ -40,7 +40,7 @@ export const handleMarkFaceAttendance: RequestHandler = (req, res) => {
   // Check if already marked today
   const today = new Date().toISOString().split("T")[0];
   const alreadyMarked = ATTENDANCE_DB.some(
-    (a) => a.studentId === studentId && a.date === today
+    (a) => a.studentId === studentId && a.date === today,
   );
 
   if (alreadyMarked) {
@@ -79,7 +79,7 @@ export const handleMarkQRAttendance: RequestHandler = (req, res) => {
   // Check if already marked today
   const today = new Date().toISOString().split("T")[0];
   const alreadyMarked = ATTENDANCE_DB.some(
-    (a) => a.studentId === studentId && a.date === today
+    (a) => a.studentId === studentId && a.date === today,
   );
 
   if (alreadyMarked) {

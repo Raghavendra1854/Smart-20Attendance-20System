@@ -13,9 +13,9 @@ export default function QRAttendance() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [scannerActive, setScannerActive] = useState(false);
-  const [status, setStatus] = useState<"idle" | "scanning" | "success" | "error" | "duplicate">(
-    "idle"
-  );
+  const [status, setStatus] = useState<
+    "idle" | "scanning" | "success" | "error" | "duplicate"
+  >("idle");
   const [message, setMessage] = useState("");
   const [scannedCode, setScannedCode] = useState("");
 
@@ -51,7 +51,8 @@ export default function QRAttendance() {
   const simulateQRDetection = () => {
     // Simulate QR code detection after 3 seconds
     setTimeout(() => {
-      const code = "STU_" + Math.random().toString(36).substr(2, 9).toUpperCase();
+      const code =
+        "STU_" + Math.random().toString(36).substr(2, 9).toUpperCase();
       setScannedCode(code);
       processQRCode(code);
     }, 3000);
@@ -77,7 +78,7 @@ export default function QRAttendance() {
       } else if (response.status === 409) {
         setStatus("duplicate");
         setMessage(
-          "You have already marked attendance today. Try again tomorrow."
+          "You have already marked attendance today. Try again tomorrow.",
         );
       } else {
         throw new Error(data.message || "Failed to mark attendance");
@@ -87,7 +88,7 @@ export default function QRAttendance() {
       setMessage(
         error instanceof Error
           ? error.message
-          : "Failed to process QR code. Please try again."
+          : "Failed to process QR code. Please try again.",
       );
     }
   };
@@ -127,7 +128,9 @@ export default function QRAttendance() {
           >
             <ArrowLeft className="w-6 h-6 text-gray-600" />
           </Link>
-          <h1 className="text-2xl font-bold text-gray-900">QR Code Attendance</h1>
+          <h1 className="text-2xl font-bold text-gray-900">
+            QR Code Attendance
+          </h1>
         </div>
       </header>
 
@@ -175,8 +178,8 @@ export default function QRAttendance() {
                 status === "success"
                   ? "bg-green-50 border border-green-200"
                   : status === "error" || status === "duplicate"
-                  ? "bg-red-50 border border-red-200"
-                  : "bg-yellow-50 border border-yellow-200"
+                    ? "bg-red-50 border border-red-200"
+                    : "bg-yellow-50 border border-yellow-200"
               }`}
             >
               {status === "success" ? (
@@ -192,25 +195,25 @@ export default function QRAttendance() {
                     status === "success"
                       ? "text-green-900"
                       : status === "error" || status === "duplicate"
-                      ? "text-red-900"
-                      : "text-yellow-900"
+                        ? "text-red-900"
+                        : "text-yellow-900"
                   }`}
                 >
                   {status === "success"
                     ? "Attendance Marked"
                     : status === "scanning"
-                    ? "Scanning QR Code"
-                    : status === "duplicate"
-                    ? "Already Marked"
-                    : "Error"}
+                      ? "Scanning QR Code"
+                      : status === "duplicate"
+                        ? "Already Marked"
+                        : "Error"}
                 </p>
                 <p
                   className={`text-sm mt-1 ${
                     status === "success"
                       ? "text-green-700"
                       : status === "error" || status === "duplicate"
-                      ? "text-red-700"
-                      : "text-yellow-700"
+                        ? "text-red-700"
+                        : "text-yellow-700"
                   }`}
                 >
                   {message}
@@ -299,7 +302,9 @@ export default function QRAttendance() {
           {/* Instructions */}
           {status === "idle" && (
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="font-semibold text-purple-900 mb-3">Instructions</h3>
+              <h3 className="font-semibold text-purple-900 mb-3">
+                Instructions
+              </h3>
               <ul className="space-y-2 text-sm text-purple-800">
                 <li>✓ Ensure QR code is clearly visible</li>
                 <li>✓ Position code within the frame</li>

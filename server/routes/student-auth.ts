@@ -43,7 +43,7 @@ export const handleStudentLogin: RequestHandler<
   }
 
   const student = STUDENTS.find(
-    (s) => s.email === email && s.password === password
+    (s) => s.email === email && s.password === password,
   );
 
   if (!student) {
@@ -53,7 +53,7 @@ export const handleStudentLogin: RequestHandler<
 
   // In production, use JWT or sessions
   const token = Buffer.from(`student:${student.id}:${Date.now()}`).toString(
-    "base64"
+    "base64",
   );
 
   const response: LoginResponse = {

@@ -170,7 +170,9 @@ export default function StudentDashboard() {
         {activeTab === "records" && (
           <div className="space-y-6">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold text-gray-900">Attendance Records</h2>
+              <h2 className="text-xl font-bold text-gray-900">
+                Attendance Records
+              </h2>
               <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 <Download className="w-5 h-5" />
                 Download PDF
@@ -197,7 +199,10 @@ export default function StudentDashboard() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    <td
+                      colSpan={4}
+                      className="px-6 py-8 text-center text-gray-500"
+                    >
                       No attendance records yet.
                     </td>
                   </tr>

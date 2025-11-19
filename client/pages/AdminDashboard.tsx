@@ -48,9 +48,24 @@ export default function AdminDashboard() {
         <div className="flex gap-4 mb-8 border-b border-gray-200 flex-wrap">
           {[
             { id: "overview", label: "Overview", icon: BarChart3, link: null },
-            { id: "students", label: "Students", icon: Users, link: "/admin/students" },
-            { id: "attendance", label: "Attendance", icon: Calendar, link: "/admin/attendance" },
-            { id: "face-recognition", label: "Face Recognition", icon: Camera, link: null },
+            {
+              id: "students",
+              label: "Students",
+              icon: Users,
+              link: "/admin/students",
+            },
+            {
+              id: "attendance",
+              label: "Attendance",
+              icon: Calendar,
+              link: "/admin/attendance",
+            },
+            {
+              id: "face-recognition",
+              label: "Face Recognition",
+              icon: Camera,
+              link: null,
+            },
             { id: "qr-code", label: "QR Code", icon: QrCode, link: null },
           ].map((tab) => {
             const Icon = tab.icon;
@@ -121,7 +136,9 @@ export default function AdminDashboard() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h2 className="text-lg font-bold text-gray-900 mb-4">Monthly Analytics</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-4">
+                Monthly Analytics
+              </h2>
               <div className="h-64 flex items-center justify-center text-gray-500">
                 <p>Chart will be displayed here</p>
               </div>
@@ -133,7 +150,9 @@ export default function AdminDashboard() {
         {activeTab === "students" && (
           <div className="space-y-6">
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold text-gray-900">Manage Students</h2>
+              <h2 className="text-xl font-bold text-gray-900">
+                Manage Students
+              </h2>
               <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 <Plus className="w-5 h-5" />
                 Add Student
@@ -163,7 +182,10 @@ export default function AdminDashboard() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td colSpan={5} className="px-6 py-8 text-center text-gray-500">
+                    <td
+                      colSpan={5}
+                      className="px-6 py-8 text-center text-gray-500"
+                    >
                       No students added yet. Click "Add Student" to get started.
                     </td>
                   </tr>
@@ -176,7 +198,9 @@ export default function AdminDashboard() {
         {/* Attendance Tab */}
         {activeTab === "attendance" && (
           <div className="space-y-6">
-            <h2 className="text-xl font-bold text-gray-900">Attendance Records</h2>
+            <h2 className="text-xl font-bold text-gray-900">
+              Attendance Records
+            </h2>
 
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <table className="w-full">
@@ -198,7 +222,10 @@ export default function AdminDashboard() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    <td colSpan={4} className="px-6 py-8 text-center text-gray-500">
+                    <td
+                      colSpan={4}
+                      className="px-6 py-8 text-center text-gray-500"
+                    >
                       No attendance records yet.
                     </td>
                   </tr>
