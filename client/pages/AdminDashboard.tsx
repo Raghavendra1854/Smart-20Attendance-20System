@@ -45,16 +45,29 @@ export default function AdminDashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation Tabs */}
-        <div className="flex gap-4 mb-8 border-b border-gray-200">
+        <div className="flex gap-4 mb-8 border-b border-gray-200 flex-wrap">
           {[
-            { id: "overview", label: "Overview", icon: BarChart3 },
-            { id: "students", label: "Students", icon: Users },
-            { id: "attendance", label: "Attendance", icon: Calendar },
-            { id: "face-recognition", label: "Face Recognition", icon: Camera },
-            { id: "qr-code", label: "QR Code", icon: QrCode },
+            { id: "overview", label: "Overview", icon: BarChart3, link: null },
+            { id: "students", label: "Students", icon: Users, link: "/admin/students" },
+            { id: "attendance", label: "Attendance", icon: Calendar, link: "/admin/attendance" },
+            { id: "face-recognition", label: "Face Recognition", icon: Camera, link: null },
+            { id: "qr-code", label: "QR Code", icon: QrCode, link: null },
           ].map((tab) => {
             const Icon = tab.icon;
-            return (
+            const element = tab.link ? (
+              <Link
+                key={tab.id}
+                to={tab.link}
+                className={`flex items-center gap-2 px-4 py-3 font-medium border-b-2 transition ${
+                  activeTab === tab.id
+                    ? "border-blue-600 text-blue-600"
+                    : "border-transparent text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                <Icon className="w-5 h-5" />
+                {tab.label}
+              </Link>
+            ) : (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
@@ -68,6 +81,7 @@ export default function AdminDashboard() {
                 {tab.label}
               </button>
             );
+            return element;
           })}
         </div>
 
